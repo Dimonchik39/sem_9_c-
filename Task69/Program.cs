@@ -10,12 +10,9 @@ int b = Convert.ToInt32(Console.ReadLine());
 
 int DegreeOFNumber(int c, int d)
 {
-    if (d == 1) return c;
-    else
-    {
-        c *= DegreeOFNumber(c, d - 1);
-    }
-    return c;
+    // if (d == 0) return 1;
+    // return c *= DegreeOFNumber(c, d - 1);
+    return d==0? 1:c *= DegreeOFNumber(c, d - 1);
 }
 
 int degree = DegreeOFNumber(a, b);
